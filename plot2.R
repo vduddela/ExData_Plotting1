@@ -6,6 +6,6 @@ data_subset$DateTime <- strptime(paste(data_subset$Date, data_subset$Time), "%d/
 
 png(file="plot2.png", width=480, height=480)
 
-plot(data_subset$DateTime, data_subset$Global_active_power, type="l", xlab = "", ylab = "Global Active Power (kilowatts)")
+plot(data_subset$DateTime, data_subset$Global_active_power, bg="white", type="l", xlab = "", ylab = "Global Active Power (kilowatts)")
 
 dev.off()

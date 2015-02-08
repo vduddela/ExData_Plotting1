@@ -4,6 +4,6 @@ data_subset <- read.csv.sql("./household_power_consumption.txt", header = T, sep
 
 png(file="plot1.png", width=480, height=480)
 
-hist(data_subset$Global_active_power, main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col="red")
+hist(data_subset$Global_active_power, bg="white", main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col="red")
 
 dev.off()
