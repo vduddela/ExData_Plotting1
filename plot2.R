@@ -4,8 +4,8 @@ data_subset <- read.csv.sql("./household_power_consumption.txt", header = T, sep
 
 data_subset$DateTime <- strptime(paste(data_subset$Date, data_subset$Time), "%d/%m/%Y %H:%M:%S")
 
-plot(data_subset$DateTime, data_subset$Global_active_power, type="l", xlab = "", ylab = "Global Active Power (kilowatts)")
+png(file="plot2.png", width=480, height=480)
 
-dev.copy(png, file="plot2.png", width=480, height=480)
+plot(data_subset$DateTime, data_subset$Global_active_power, type="l", xlab = "", ylab = "Global Active Power (kilowatts)")
 
 dev.off()
